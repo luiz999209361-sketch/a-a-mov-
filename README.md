@@ -1,40 +1,29 @@
-# Açaí Moví
+# Açaí Moví — versão GitHub Pages
 
-Loja de delivery construída com React + Vite + Supabase.
+Esta versão é estática e pode ser publicada diretamente pelo GitHub Pages sem Vite, Node ou build. Isso evita a tela branca quando os arquivos-fonte de um projeto Vite são enviados diretamente para o Pages.
 
-## Rodar localmente
+## Como publicar
 
-```bash
-npm install
-npm run dev
-```
+1. Extraia o ZIP.
+2. Envie o conteúdo da pasta para a raiz do repositório GitHub.
+3. No GitHub: Settings → Pages → Source → Deploy from a branch.
+4. Escolha a branch `main` e a pasta `/ (root)`.
+5. Salve e aguarde a publicação.
 
-## Supabase
+O endereço esperado para o repositório da captura é:
+`https://luiz999209361-sketch.github.io/a-a-mov/`
 
-1. Crie um projeto no Supabase.
-2. Abra o SQL Editor.
-3. Execute `supabase/schema.sql`.
-4. Copie `.env.example` para `.env.local`.
-5. Preencha:
-   - `VITE_SUPABASE_URL`
-   - `VITE_SUPABASE_PUBLISHABLE_KEY`
-6. Rode novamente `npm run dev`.
+## O que já funciona
+- Identidade roxa/amarela da Açaí Moví.
+- Cardápio: 300 ml, 400 ml, 500 ml e marmita 1 kg.
+- 4 complementos incluídos nos copos e 6 na marmita.
+- Complementos extras com preço e quantidade.
+- Carrinho.
+- Escolha entre entrega e retirada.
+- Todos os bairros e taxas fornecidos.
+- Pix, cartão e dinheiro como opção de pagamento no resumo.
+- Montagem de mensagem completa e envio para o WhatsApp.
+- Instagram e WhatsApp da loja.
 
-## GitHub
-
-```bash
-git init
-git add .
-git commit -m "estrutura inicial Açaí Moví"
-git branch -M main
-git remote add origin SEU_REPOSITORIO
-git push -u origin main
-```
-
-## Pagamento
-
-O frontend já permite escolher Pix, cartão e dinheiro, mas **não considera Pix/cartão como pagos**. A integração real deve ser feita com um gateway e confirmação server-side/webhook antes de colocar em produção.
-
-## Observação
-
-Os dados dos produtos e complementos estão inicialmente no frontend para o site funcionar imediatamente. O SQL também cria as tabelas do Supabase para a próxima etapa de migração do catálogo para o banco.
+## Importante
+Pix e cartão ainda não estão cobrando de verdade nesta versão. A integração de pagamento e a confirmação via webhook/Supabase serão feitas em uma etapa própria.
